@@ -31,12 +31,6 @@ function generateFolio(){
 // GUARDAR REGISTRO (¡CORRECCIÓN FINAL!)
 // ======================
 document.getElementById('saveBtn').addEventListener('click', ()=>{
-        const signatureCanvas = document.getElementById('signaturePreviewCus');
-
-    if (isCanvasEmpty(signatureCanvas)) {
-        alert('⚠️ Debes firmar antes de guardar el registro.');
-        return; // Detiene el guardado
-    }
     const record = {
         folio: generateFolio(),
         OT: get('OT'),
