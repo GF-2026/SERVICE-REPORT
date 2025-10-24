@@ -67,14 +67,17 @@ textarea{
     display:flex;
     align-items:center;
     gap:6px;
-    font-size:0.9rem;    
+    font-size:0.9rem;
+    
     /* --- Borde y Relleno --- */
     border:none;
     padding: 6px 10px;               
     border-radius: 6px;              
-    margin-bottom: 8px;
+    margin-bottom: 8px;              
+    
     /* 1. Opción: Color de fondo gris muy claro */
-    /* background-color: #f0f0f0; */    
+    /* background-color: #f0f0f0; */ 
+    
     /* 2. Opción: Color de fondo blanco (si necesitas forzarlo) */
     background-color: rgba(100, 200, 256);
     margin-top:16px;
@@ -93,6 +96,7 @@ button.secondary{
     background:#ccc;
     color:#000;
 }
+
 /* Tabla */
 .table-wrap{
     overflow-x:auto;
@@ -106,6 +110,7 @@ th,td{
     padding:6px 8px;
     text-align:left;
 }
+
 /* MODAL FIRMA */
 #signatureModal{
     display:none;
@@ -148,15 +153,18 @@ hr {
 }
 .section-header {
     /* Agrega un poco de espacio debajo del encabezado para separarlo de los campos */
-    margin-bottom: 12px;    
+    margin-bottom: 12px; 
+    
     /* Hace que el texto sea un poco más grande y usa negrita para destacarlo */
     font-size: 1.1rem;
-    font-weight: 600;    
+    font-weight: 600; 
+    
     /* Asegura que el texto y el texto 'muted' a su lado estén alineados */
     display: flex;
     justify-content: space-between; /* Mueve el texto 'muted' al extremo derecho */
     align-items: center;
 }
+
 /* Opcional: Estilo para el número de sección */
 .section-header strong {
     color: var(--accent); /* Podrías usar el color azul de tu formulario */
@@ -167,6 +175,7 @@ hr {
     border-radius: 5cqi;      /* Puedes añadir un radio si lo deseas */
     margin-left:5px;
 }
+
 /* Para el nombre del cliente/usuario */
 #name_cus {
     border: 1px solid rgb(5, 29, 250); /* Borde de guiones (dashed) y naranja */
@@ -178,4 +187,68 @@ hr {
     /* Mantenemos el ancho para 5-6 dígitos */
     width: 60px; 
     box-sizing: border-box; 
-    padding: 2px 5px;     
+    padding: 2px 5px; 
+    
+    /* Nota: Si esto no funciona, prueba añadir !important TEMPORALMENTE 
+       al final de la línea 'width' para confirmar que el problema es la especificidad. */
+}
+.contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    font-family: sans-serif;
+  }
+
+  .seccion {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 15px;
+    width: 200px;
+    text-align: center;
+    background: #f9f9f9;
+  }
+
+  .titulo {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .semaforo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70px;
+    background: #333;
+    border-radius: 15px;
+    padding: 10px;
+    margin: 0 auto;
+    box-shadow: 0 0 10px #0006 inset;
+  }
+
+  .luz {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin: 5px 0;
+    background-color: #222;
+    opacity: 0.3;
+    transition: 0.3s;
+  }
+
+  .luz.activa {
+    opacity: 1;
+    box-shadow: 0 0 15px 5px currentColor;
+  }
+
+  .roja { color: red; background-color: red; }
+  .amarilla { color: yellow; background-color: yellow; }
+  .verde { color: limegreen; background-color: limegreen; }
+
+  .botones {
+    margin-top: 8px;
+  }
+
+  .botones button {
+    margin: 2px;
+    padding: 4px 8px;
+  }
